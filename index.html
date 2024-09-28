@@ -10,76 +10,76 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Poppins', sans-serif; /* Ensure Poppins font is loaded */
+      font-family: 'Poppins', sans-serif; 
     }
 
     body {
-      background-image: url('pink.png'); /* Make sure the image path is correct */
-      background-size: cover;           /* Cover the whole page */
+      background-image: url('pink.png'); 
+      background-size: cover;           
       display: flex;
       flex-direction: column;
-      align-items: center;              /* Centers all child elements horizontally */
-      justify-content: center;          /* Centers all child elements vertically */
-      min-height: 100vh;                /* Ensures the body takes full height */
-      margin: 0;                        /* Removes default margin */
+      align-items: center;              
+      justify-content: center;          
+      min-height: 100vh;                
+      margin: 0;                        
     }
 
     .circular-image {
-      width: 200px;                     /* Set desired width */
-      height: 200px;                    /* Set desired height */
+      width: 200px;                     
+      height: 200px;                    
       border-radius: 50%;
-      object-fit: cover;                /* Ensures the image covers the container */
-      border: 2px solid #fff;           /* Optional: Adds a border */
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow */
-      margin-bottom: 20px;              /* Space between circular image and description box */
+      object-fit: cover;                
+      border: 2px solid #fff;           
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+      margin-bottom: 20px;              
     }
 
     .description-box {
-      width: 300px;                     /* Set the width of the box */
-      padding: 20px;                    /* Add padding inside the box */
-      border: 1px solid #ddd;           /* Add a light border */
-      border-radius: 10px;              /* Rounded corners */
-      background-color: #f9f9f9;        /* Light background color */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-      text-align: center;               /* Center-align the text */
-      margin: 20px auto;                /* Center the box on the page */
+      width: 300px;                     
+      padding: 20px;                    
+      border: 1px solid #ddd;           
+      border-radius: 10px;              
+      background-color: #f9f9f9;        
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+      text-align: center;               
+      margin: 20px auto;                
     }
 
     .description-box h3 {
-      margin: 10px 0;                   /* Space around the heading */
-      font-size: 1.2em;                 /* Larger heading font size */
-      color: #333;                      /* Heading color */
+      margin: 10px 0;                   
+      font-size: 1.2em;                 
+      color: #333;                      
     }
 
     .clock-container {
-      margin-top: 15px;                 /* Space above the clock container */
-      padding: 10px 20px;               /* Padding inside the clock container */
-      border: 1px solid #ddd;           /* Border around the clock */
-      border-radius: 8px;               /* Rounded corners for the clock */
-      background-color: #fff;           /* Light background color */
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for the clock */
+      margin-top: 15px;                 
+      padding: 10px 20px;               
+      border: 1px solid #ddd;           
+      border-radius: 8px;               
+      background-color: #fff;           
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
     }
 
     .date-time {
-      font-size: 1em;                   /* Date and time font size */
-      color: #555;                      /* Color of date and time text */
+      font-size: 1em;                   
+      color: #555;                      
     }
 
     .social-media {
-      display: flex;                    /* Flexbox layout to align items */
-      gap: 10px;                        /* Space between icons */
-      margin-top: 20px;                 /* Space above the social media icons */
+      display: flex;                    
+      gap: 10px;                        
+      margin-top: 20px;                 
     }
 
     .social-media img {
       width: 35px;
       height: 35px;
       transition: transform 0.2s;
-      cursor: pointer;                  /* Pointer cursor on hover */
+      cursor: pointer;                  
     }
 
     .social-media img:hover {
-      transform: scale(1.1);            /* Slight scale effect on hover */
+      transform: scale(1.1);            
     }
   </style>
 </head>
@@ -109,7 +109,7 @@
   <script>
     function updateTime() {
       const now = new Date();
-      // Format the date and time correctly to show both
+      
       const options = {
         weekday: 'long',
         year: 'numeric',
@@ -118,16 +118,16 @@
         hour: '2-digit',
         minute: '2-digit',
         second: '2-digit',
-        hour12: false // Optional: Set to true for 12-hour format with AM/PM
+        hour12: false 
       };
-      // Format using toLocaleString to get date and time together
+      
       const formattedDateTime = now.toLocaleString('en-US', options);
       document.getElementById('dateTime').textContent = formattedDateTime;
     }
 
-    // Update time every second
+    
     setInterval(updateTime, 1000);
-    updateTime(); // Initial call to display immediately
+    updateTime(); 
   </script>
 </body>
 </html>
